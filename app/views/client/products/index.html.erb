@@ -1,9 +1,11 @@
  <p> Here are the products currently for sale </p>
  <% @products.each do |product| %>  
 
-    <p style="background-color:lightblue"> <%= product["name"] %> <p> 
-      
+    <h2 style="background-color:lightblue"> <%= product["name"] %> <h2> 
+
     <h5> <%= product["description"] %> </h4> 
-    <h6> <%= product["price"] %> </h6>
-    <img src = "<%= product["image_url"] %>" >
+    
+    <a href="/client/products/<%=product["id"]%>">
+    <img src = "<%= product["image_url"] %>" height="280" width="280">
+    </a>
  <% end %>

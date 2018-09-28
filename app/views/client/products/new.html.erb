@@ -1,0 +1,21 @@
+<%= form_tag "/client/products", method: :post do %>
+  <div> 
+    Name: <input type="text" name="name">
+  </div>
+  <div> 
+    Price: <input type="text" name="price">
+  </div>
+  <div> 
+    Image URL: <input type="text" name="image_url">
+  </div>
+  <div>
+    Description: <input type="text" name="description">
+  </div>
+  <div> 
+    Stock: <input type="text" name="stock">
+  </div>
+  <div>
+    Supplier <input type="text" name="supplier_id">
+  </div>
+  <input type="submit" value="Update Catalog">
+<% end %> 
