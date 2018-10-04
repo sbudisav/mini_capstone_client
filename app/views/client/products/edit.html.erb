@@ -1,0 +1,21 @@
+<h1> Update Item </h1>
+
+<%= form_tag "/client/products/#{@product["id"]}", method: :patch do %>
+  <div> 
+    Name: <input type="text" name="name" value="<%=@product['name']%>">
+  </div>
+  <div> 
+    Price: <input type="text" name="price" value="<%=@product['price']%>">
+  </div>
+  <div>
+    Description: <input type="text" name="description" value="<%=@product['description']%>">
+  </div>
+  <div> 
+    Stock: <input type="text" name="stock" value="<%=@product['stock']%>">
+  </div>
+  <div>
+    Supplier ID <input type="text" name="supplier_id" value="<%=@product['supplier_id']%>">
+  </div>
+  <input type="submit" value="Update Item">
+<% end %> 
+ <a href="/client/products/<%= @product["id"] %>" data-method="delete">Delete Item</a>

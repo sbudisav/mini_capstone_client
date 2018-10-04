@@ -1,4 +1,7 @@
 <h2> <%= @product["name"] %> <h2> 
 <h3> <%= @product["description"] %> <h3> 
 <h5> <%= @product["formatted"]["price"] %> </h5>
+<%
+<img src = "<%= @product["image_url"] %>" height="360" width="360">
+<a href="/client/products/<%= @product["id"] %>/edit"> Update Info </a>
 
